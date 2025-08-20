@@ -68,7 +68,7 @@ def validate_drive_access() -> Tuple[bool, str]:
     except Exception as e:
         return False, f"Google Drive access failed: {e}"
     
-#
+# Try to validate Google Sheets access
 def validate_sheets_access(spreadsheet_id: Optional[str]=None) -> Tuple[bool, str]:
     try:
         svc = get_sheets_service()
